@@ -5,6 +5,10 @@
 </head>
 <body>
     <h1>Welcome to the {{name}}</h1>
+
+    {% for course in courses %}
+    {{ course.course_title }}
+    {% endfor %}
     
 </body>
 </html>

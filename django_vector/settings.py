@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     
     'recommender',
     
+    'django_filters',
+    
 ]
 
 MIDDLEWARE = [
