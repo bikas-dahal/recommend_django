@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Courses</title>
+</head>
+<body>
+    <div>
+        <form action='' method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type='submit' value='Submit'>Recommend</button>
+            
+        </form>
+    </div>
+    <hr> 
+    <p> Showing recommendation for {{ search_term }}</P> 
+        {{ result }}
+</body>
+</html>

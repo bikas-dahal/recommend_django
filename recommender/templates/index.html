@@ -1,9 +1,20 @@
+{% load customizer %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Recommender System</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        
+        }
+    </style>
 </head>
 <body>
+
+
+
     <h1>Welcome to the {{name}}</h1>
 
     <h2>Here are the courses</h2>
@@ -29,7 +40,7 @@
         <tbody>
         <tr>
         <td>{{ course.course_id }}</td>
-        <td>{{ course.course_title }}</td>
+        <td>{{ course.course_title|highlight_search:search_item }}</td>
         <td>{{ course.price }}</td>
         <td>{{ course.subject }}</td>
         <td><a href="{% url "read" course.id %}"> view </a></td>
